@@ -1,0 +1,129 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    -20deg,
+    #ddd6f3 0%,
+    #faaca8 100%,
+    #faaca8 100%
+  );
+}
+
+/* Calculator Container */
+.calculator {
+  width: 300px;
+  padding: 20px;
+  background-color: #131c24;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  border-radius: 14px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Display Styling */
+.display {
+  margin-bottom: 20px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  border-radius: 12px;
+}
+
+.display input {
+  width: 100%;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #818181;
+}
+
+/* Expression and Result Input */
+#calculator-expression {
+  height: 40px;
+}
+
+#calculator-result {
+  height: 30px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Button Container */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  border-top: 1px solid #9ca3af;
+  padding-top: 1rem;
+}
+
+/* Button Styling */
+.buttons .btn {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #007bff;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Special Button Styling */
+.buttons .btn[data-action='clear'],
+.buttons .btn[data-action='delete'] {
+  background-color: #64748b;
+  color: #c7c5c5;
+}
+
+.buttons .btn[data-action='clear']:hover,
+.buttons .btn[data-action='delete']:hover {
+  background-color: #94a3b8;
+}
+
+.buttons .btn[data-action='operation'] {
+  background-color: #3b82f6;
+}
+
+.buttons .btn[data-action='operation']:hover {
+  background-color: #60a5fa;
+}
+
+.buttons .btn[data-action='calculate'] {
+  background-color: #ffc107;
+  grid-column: span 2;
+}
+
+.buttons .btn[data-action='calculate']:hover {
+  background-color: #e0a800;
+}
+
+/* Button Styling for Numbers */
+.buttons .btn[data-action='number'],
+.buttons .btn[data-action='decimal'] {
+  background-color: #475569;
+
+  color: #29a8ff;
+}
+
+.buttons .btn[data-action='number']:hover,
+.buttons .btn[data-action='decimal']:hover {
+  background-color: #64748b;
+}
